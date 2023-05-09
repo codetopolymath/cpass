@@ -91,7 +91,7 @@ process.stdin.on('data', function(chunk) {
         'source_addr': parts[0],
         'destination_addr': parts[1],
         'sm_length': Buffer.byteLength(message),
-        'short_message': new Buffer(message)
+        'short_message': new Buffer.from(message)
     });
 });
 
